@@ -1,10 +1,10 @@
 "use client"
 
-import Image from "next/image"
 import {   Leaf, Shield, User, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 import { StarIcon } from "./star-icon"
 import { AnimatedCard } from "./animated-card"
+import ExportedImage from "next-image-export-optimizer"
 
 export function AdvantagesSection() {
   return (
@@ -66,7 +66,7 @@ export function AdvantagesSection() {
                   </motion.div>
                 </div>
                 <div className="relative md:w-1/3 h-64 md:h-auto rounded-2xl overflow-hidden">
-                  <Image
+                  <ExportedImage
                     src="/modern_barn.png"
                     alt="Elegant home interior"
                     fill
@@ -139,7 +139,7 @@ export function AdvantagesSection() {
             <div className="bg-white rounded-3xl p-8 h-full">
               <div className="flex flex-col md:flex-row gap-8 h-full">
                 <div className="relative md:w-1/3 h-48 md:h-auto rounded-2xl overflow-hidden group">
-                  <Image
+                  <ExportedImage
                     src="/modern_barn_inside.webp"
                     alt="Modern apartment building"
                     fill

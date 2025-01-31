@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
+import ExportedImage from "next-image-export-optimizer"
 
 export function HeroSection() {
   return (
@@ -44,7 +44,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut",delay: 0.3 }}
           className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
         >
-          <Image
+          <ExportedImage
             src="/white_house_no_bg.png"
             alt="Nowoczesny budynek architektoniczny z wysuniętą sekcją"
             fill

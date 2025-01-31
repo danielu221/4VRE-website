@@ -1,10 +1,10 @@
 import Link from "next/link"
-import Image from "next/image"
 import { MapPin } from "lucide-react"
 import { AnimatedStat } from "@/app/components/animated-stat"
 import { Footer } from "@/app/components/footer"
 import { AdvantagesSection } from "@/app/components/advantages-section"
 import { HeroSection } from "@/app/components/hero-section"
+import ExportedImage from "next-image-export-optimizer"
 
 export default function Page() {
   return (
@@ -48,7 +48,7 @@ export default function Page() {
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] md:h-[600px] order-2 md:order-1">
-              <Image
+              <ExportedImage
                 src="/minimal.jpg"
                 alt="Modern high-rise building"
                 fill
@@ -155,7 +155,7 @@ export default function Page() {
             </div>
 
             <div className="relative h-[800px]">
-              <Image
+              <ExportedImage
                 src="/modern_barn_inside.webp"
                 alt="Luksusowe wnętrze z panoramicznym widokiem"
                 fill
