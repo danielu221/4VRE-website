@@ -9,6 +9,7 @@ import { AnimatedElement } from "@/app/components/animated-element";
 import { Header } from "@/app/components/header";
 import ExportedImage from "next-image-export-optimizer";
 import Script from "next/script";
+import { ImageCarousel } from "@/app/components/image-carousel";
 
 export default function Page() {
   return (
@@ -147,13 +148,32 @@ export default function Page() {
 
               <AnimatedElement 
                 delay={0.2}
-                className="relative h-[800px]"
+                className="relative"
               >
-                <ExportedImage
-                  src="/modern_barn_inside.webp"
-                  alt="Luksusowe wnętrze z panoramicznym widokiem"
-                  fill
-                  className="object-cover rounded-lg"
+                <ImageCarousel 
+                  images={[
+                    {
+                      src: "/carousel-1.webp",
+                      alt: "Nowoczesny dom typu nowoczesna stodoła"
+                    },
+                    {
+                      src: "/carousel-2.webp",
+                      alt: "Nowoczesny salon"
+                    }, 
+                    {
+                      src: "/carousel-3.webp",
+                      alt: "Luksusowe wnętrze z panoramicznym widokiem"
+                    },
+                    {
+                      src: "/carousel-4.webp",
+                      alt: "Nowoczesna sypialnia"
+                    },   {
+                      src: "/carousel-5.webp",
+                      alt: "Nowoczesna lazienka"
+                    },
+                    // Add more images as needed
+                  ]}
+                  autoplayDelay={5000} // Optional: customize delay in milliseconds
                 />
               </AnimatedElement>
             </div>
