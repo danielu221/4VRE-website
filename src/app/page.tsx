@@ -1,48 +1,19 @@
 "use client"
 
-import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { motion } from "framer-motion";
 import { AnimatedStat } from "@/app/components/animated-stat";
 import { Footer } from "@/app/components/footer";
 import { AdvantagesSection } from "@/app/components/advantages-section";
 import { HeroSection } from "@/app/components/hero-section";
+import { AnimatedElement } from "@/app/components/animated-element";
+import { Header } from "@/app/components/header";
 import ExportedImage from "next-image-export-optimizer";
 
 export default function Page() {
   return (
     <div className="min-h-screen">
       <div className="bg-[#E5EEF3]">
-        <header className="container mx-auto px-4 py-6">
-          <nav className="flex items-center justify-between">
-            <Link href="/" className="text-[#2D3134] text-xl font-semibold">
-              4 Vision Real Estate
-            </Link>
-            {/* <ul className="hidden md:flex items-center gap-8">
-              <li>
-                <Link href="/" className="text-[#2D3134] hover:opacity-80 transition-opacity">
-                  HOME
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-[#2D3134] hover:opacity-80 transition-opacity">
-                  O NAS
-                </Link>
-              </li>
-              <li>
-                <Link href="/project" className="text-[#2D3134] hover:opacity-80 transition-opacity">
-                  INWESTYCJE
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-[#2D3134] hover:opacity-80 transition-opacity">
-                  KONTAKT
-                </Link>
-              </li>
-            </ul> */}
-          </nav>
-        </header>
-
+        <Header />
         <HeroSection />
       </div>
 
@@ -50,11 +21,8 @@ export default function Page() {
       <section className="bg-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
+            <AnimatedElement 
+              direction="left"
               className="relative h-[400px] md:h-[600px] order-2 md:order-1"
             >
               <ExportedImage
@@ -63,12 +31,9 @@ export default function Page() {
                 fill
                 className="object-cover rounded-lg"
               />
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
+            </AnimatedElement>
+            <AnimatedElement 
+              direction="right"
               className="space-y-8 order-1 md:order-2"
             >
               <h2 className="text-[#2D3134] text-3xl sm:text-4xl md:text-5xl font-bold leading-tight ">
@@ -86,7 +51,7 @@ export default function Page() {
                 rozwój i zaufanie Klientów. Zachęcamy do śledzenia naszych
                 postępów oraz zapoznania się z aktualną ofertą.
               </p>
-            </motion.div>
+            </AnimatedElement>
           </div>
         </div>
       </section>
@@ -124,26 +89,15 @@ export default function Page() {
       {/* Art of Living Section */}
       <section id="inwestycje" className="bg-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="text-center max-w-4xl mx-auto mb-16">
+          <AnimatedElement className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-[#2D3134] text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
               Obecne inwestycje
             </h2>
-          </div>
+          </AnimatedElement>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-              className="space-y-6"
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6 }}
-              >
+            <div className="space-y-6">
+              <AnimatedElement>
                 <h2 className="text-[#2D3134] text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
                   Wyrwa Residence
                 </h2>
@@ -151,15 +105,9 @@ export default function Page() {
                   <MapPin className="h-4 w-4" />
                   ul. Wyrwa, Kraków
                 </p>
-              </motion.div>
+              </AnimatedElement>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="border-t border-gray-200 pt-8"
-              >
+              <AnimatedElement delay={0.1} className="border-t border-gray-200 pt-8">
                 <h3 className="text-2xl font-medium text-[#2D3134] mb-4">
                   Prestiżowa lokalizacja
                 </h3>
@@ -168,15 +116,9 @@ export default function Page() {
                   idealne połączenie spokoju, zieleni i bliskości miejskich
                   udogodnień.
                 </p>
-              </motion.div>
+              </AnimatedElement>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="border-t border-gray-200 pt-8"
-              >
+              <AnimatedElement delay={0.2} className="border-t border-gray-200 pt-8">
                 <h3 className="text-2xl font-medium text-[#2D3134] mb-4">
                   Przemyślane wnętrza
                 </h3>
@@ -186,15 +128,9 @@ export default function Page() {
                   mistrzowskie wykończenia, Twój dom odzwierciedla precyzję i
                   dbałość o szczegóły.
                 </p>
-              </motion.div>
+              </AnimatedElement>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="border-t border-gray-200 pt-8"
-              >
+              <AnimatedElement delay={0.3} className="border-t border-gray-200 pt-8">
                 <h3 className="text-2xl font-medium text-[#2D3134] mb-4">
                   Nowoczesna architektura
                 </h3>
@@ -202,15 +138,9 @@ export default function Page() {
                   Domy zaprojektowane z myślą o elegancji i funkcjonalności,
                   łączące minimalistyczny design z najwyższą jakością wykonania.
                 </p>
-              </motion.div>
+              </AnimatedElement>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-gray-200 pt-8"
-              >
+              <AnimatedElement delay={0.4} className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-gray-200 pt-8">
                 <AnimatedStat
                   end={14}
                   label="Czas dojazdu do rynku"
@@ -218,14 +148,11 @@ export default function Page() {
                 />
                 <AnimatedStat end={130} label="Powierzchnia domu" suffix="m2" />
                 <AnimatedStat end={2} label="Liczba domów " />
-              </motion.div>
-            </motion.div>
+              </AnimatedElement>
+            </div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <AnimatedElement 
+              delay={0.2}
               className="relative h-[800px]"
             >
               <ExportedImage
@@ -234,7 +161,7 @@ export default function Page() {
                 fill
                 className="object-cover rounded-lg"
               />
-            </motion.div>
+            </AnimatedElement>
           </div>
         </div>
       </section>

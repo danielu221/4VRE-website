@@ -20,11 +20,15 @@ export function Footer() {
               </p> */}
               <p className="flex items-center gap-2 text-gray-400">
                 <Phone className="h-5 w-5" />
-                +48 510 194 261
+                <Link href="tel:+48695585897" className="hover:text-white transition-colors">
+                  +48 695 585 897
+                </Link>
               </p>
               <p className="flex items-center gap-2 text-gray-400">
                 <Mail className="h-5 w-5" />
-                kontakt@4vre.com
+                <Link href="mailto:kontakt@4vre.com" className="hover:text-white transition-colors">
+                  kontakt@4vre.com
+                </Link>
               </p>
             </div>
           </div>
