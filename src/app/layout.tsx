@@ -19,8 +19,28 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "4 Vision Real Estate",
-  description: "Nowoczesne domy dla nowoczesnego życia",
+  title: "4 Vision Real Estate | Nowoczesne domy w Krakowie",
+  description: "4 Vision Real Estate - Nowoczesne domy dla nowoczesnego życia. Luksusowe nieruchomości w prestiżowych lokalizacjach Krakowa. Wyrwa Residence - połączenie elegancji i funkcjonalności.",
+  keywords: ["nieruchomości Kraków", "domy na sprzedaż", "luksusowe domy", "Wyrwa Residence", "nowoczesne domy", "4 Vision Real Estate"],
+  authors: [{ name: "4 Vision Real Estate" }],
+  creator: "4 Vision Real Estate",
+  publisher: "4 Vision Real Estate",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "pl_PL",
+    url: "https://4vre.pl",
+    title: "4 Vision Real Estate | Nowoczesne domy w Krakowie",
+    description: "4 Vision Real Estate - Nowoczesne domy dla nowoczesnego życia. Luksusowe nieruchomości w prestiżowych lokalizacjach Krakowa.",
+    siteName: "4 Vision Real Estate",
+  },
 };
 
 export default function RootLayout({
