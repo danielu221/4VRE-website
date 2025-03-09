@@ -1,6 +1,7 @@
 "use client"
 
-import { MapPin } from "lucide-react";
+import {  MapPin } from "lucide-react";
+import Link from "next/link"
 import { AnimatedStat } from "@/app/components/animated-stat";
 import { AnimatedElement } from "@/app/components/animated-element";
 import { ImageCarousel } from "@/app/components/image-carousel";
@@ -69,6 +70,14 @@ export function ProjectsSection() {
               <AnimatedStat end={130} label="Powierzchnia domu" suffix="m2" />
               <AnimatedStat end={2} label="Liczba domów " />
             </AnimatedElement>
+            <div className="pt-8">
+              <Link
+                href="/inwestycje/wyrwa"
+                className="px-6 py-3 bg-secondary text-white rounded hover:bg-secondary/90 transition-all duration-300 hover:scale-105"
+              >
+                Czytaj więcej
+              </Link>
+            </div>
           </div>
 
           <AnimatedElement 
@@ -78,22 +87,22 @@ export function ProjectsSection() {
             <ImageCarousel 
               images={[
                 {
-                  src: "/carousel-1.webp",
+                  src: "/wyrwa_zewnatrz_4.jpg",
                   alt: "Nowoczesny dom typu nowoczesna stodoła"
                 },
                 {
-                  src: "/carousel-2.webp",
-                  alt: "Nowoczesny salon"
+                  src: "/wyrwa_zewnatrz_2.jpg",
+                  alt: "Nowoczesny dom typu nowoczesna stodoła"
                 }, 
                 {
-                  src: "/carousel-3.webp",
-                  alt: "Luksusowe wnętrze z panoramicznym widokiem"
+                  src: "/wyrwa_wnetrze_2.jpg",
+                  alt: "Nowoczesny salon"
                 },
                 {
-                  src: "/carousel-4.webp",
-                  alt: "Nowoczesna sypialnia"
+                  src: "/wyrwa_wnetrze_10.jpg",
+                  alt: "Nowoczesna lazienka"
                 },   {
-                  src: "/carousel-5.webp",
+                  src: "/wyrwa_wnetrze_11.jpg",
                   alt: "Nowoczesna lazienka"
                 },
                 // Add more images as needed
