@@ -38,7 +38,7 @@ export function AnimatedStat({ end, label, suffix = "" }: AnimatedStatProps) {
 
   return (
     <div ref={ref} className="space-y-2">
-      <p className="text-4xl font-bold text-[#2D3134]">
+      <p className="text-4xl font-bold">
         {count}
         {suffix}
       </p>

@@ -3,7 +3,7 @@ import { Phone, Mail} from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-[#1E2B3B] text-white">
+    <footer className="bg-[#605c53] text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -19,14 +19,14 @@ export function Footer() {
                 Dubai, UAE 35624
               </p> */}
               <p className="flex items-center gap-2 text-gray-400">
-                <Phone className="h-5 w-5" />
-                <Link href="tel:+48695585897" className="hover:text-white transition-colors">
+                <Phone className="h-5 w-5 text-secondary-foreground" />
+                <Link href="tel:+48695585897" className="hover:text-white transition-colors text-secondary-foreground">
                   +48 695 585 897
                 </Link>
               </p>
               <p className="flex items-center gap-2 text-gray-400">
-                <Mail className="h-5 w-5" />
-                <Link href="mailto:kontakt@4vre.com" className="hover:text-white transition-colors">
+                <Mail className="h-5 w-5 text-secondary-foreground" />
+                <Link href="mailto:kontakt@4vre.com" className="hover:text-white transition-colors text-secondary-foreground">
                   kontakt@4vre.com
                 </Link>
               </p>
