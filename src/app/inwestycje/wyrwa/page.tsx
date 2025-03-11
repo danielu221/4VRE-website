@@ -23,6 +23,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Footer } from "@/app/components/footer";
 import { IconCard } from "@/app/components/icon-card";
 import { Button } from "@/components/ui/button";
+import { Gallery } from "@/app/components/gallery";
 
 export default function WyrwaPage() {
   const propertyDetails = [
@@ -424,11 +425,71 @@ export default function WyrwaPage() {
           <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
             Galeria
           </h2>
-          <h3 className="text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <h3 className="text-center text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+            Odkryj piękno i elegancję naszych wnętrz. Każde pomieszczenie zostało zaprojektowane z dbałością o detale, 
+            komfort i nowoczesny styl.
           </h3>
           
+          <div className="mt-12">
+            <Gallery 
+              images={[
+                {
+                  src: "/images/gallery/interior1.jpg",
+                  alt: "Interior design - living room",
+                  width: 1200,
+                  height: 1200
+                },
+                {
+                  src: "/images/gallery/interior2.jpg",
+                  alt: "Interior design - kitchen",
+                  width: 1200,
+                  height: 1200
+                },
+                {
+                  src: "/images/gallery/interior3.jpg",
+                  alt: "Interior design - bathroom",
+                  width: 1200,
+                  height: 1200
+                },
+                {
+                  src: "/images/gallery/interior4.jpg",
+                  alt: "Interior design - bedroom",
+                  width: 1200,
+                  height: 1200
+                },
+                {
+                  src: "/images/gallery/interior5.jpg",
+                  alt: "Interior design - living area",
+                  width: 1200,
+                  height: 1200
+                },
+                {
+                  src: "/images/gallery/interior6.jpg",
+                  alt: "Interior design - bathroom detail",
+                  width: 1200,
+                  height: 1200
+                },
+                {
+                  src: "/images/gallery/interior4.jpg",
+                  alt: "Interior design - bedroom",
+                  width: 1200,
+                  height: 1200
+                },
+                {
+                  src: "/images/gallery/interior5.jpg",
+                  alt: "Interior design - living area",
+                  width: 1200,
+                  height: 1200
+                },
+                {
+                  src: "/images/gallery/interior6.jpg",
+                  alt: "Interior design - bathroom detail",
+                  width: 1200,
+                  height: 1200
+                }
+              ]}
+            />
+          </div>
         </div>
       </section>
 
