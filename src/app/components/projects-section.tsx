@@ -67,7 +67,7 @@ export function ProjectsSection() {
                 label="Czas dojazdu do rynku"
                 suffix="min"
               />
-              <AnimatedStat end={130} label="Powierzchnia domu" suffix="m2" />
+              <AnimatedStat end={107} label="Powierzchnia domu" suffix="m2" />
               <AnimatedStat end={2} label="Liczba domów " />
             </AnimatedElement>
             <div className="pt-8">

@@ -46,7 +46,7 @@ export default function WyrwaPage() {
     },
     {
       icon: <Fence className="w-8 h-8 " />,
-      value: "343 m²",
+      value: "330 m²",
       subValue: "/ dom",
       label: "POW. OGRODU",
     },
@@ -87,34 +87,34 @@ export default function WyrwaPage() {
 
   const locationAmenities = [
     {
-      icon: <School className="w-10 h-10" strokeWidth={1} />,
-      name: "SZKOŁA",
-      distance: "1.2 km",
-      time: "3 minuty",
-    },
-    {
-      icon: <Building className="w-10 h-10" strokeWidth={1} />,
-      name: "GALERIA",
-      distance: "4 km",
-      time: "7 minut",
-    },
-    {
-      icon: <Building2 className="w-10 h-10" strokeWidth={1} />,
-      name: "SZPITAL",
-      distance: "X km",
-      time: "X minut",
-    },
-    {
       icon: <TreePine className="w-10 h-10" strokeWidth={1} />,
-      name: "PARK",
+      name: "PARK ZDROJOWY",
       distance: "2 km",
-      time: "5 minut",
+      time: "4 minuty",
     },
     {
       icon: <Landmark className="w-10 h-10" strokeWidth={1} />,
       name: "RYNEK",
       distance: "12 km",
       time: "15 minut",
+    },
+    {
+      icon: <School className="w-10 h-10" strokeWidth={1} />,
+      name: "SZKOŁA PODSTAWOWA",
+      distance: "1 km",
+      time: "3 minuty",
+    },
+    {
+      icon: <Building className="w-10 h-10" strokeWidth={1} />,
+      name: "CENTRUM HANDLOWE",
+      distance: "3 km",
+      time: "6 minut",
+    },
+    {
+      icon: <Building2 className="w-10 h-10" strokeWidth={1} />,
+      name: "SZPITAL",
+      distance: "5 km",
+      time: "11 minut",
     },
   ];
 
@@ -149,8 +149,7 @@ export default function WyrwaPage() {
               </div>
 
               <p className=" text-base leading-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Kameralna i nowoczesna inwestycja z dwoma niezależnymi domami. Spokojne zacisze w dogodnej lokalizacji Krakowa.
               </p>
             </div>
 
@@ -186,9 +185,8 @@ export default function WyrwaPage() {
           <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
             Atuty
           </h2>
-          <h3 className="text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <h3 className="text-center text-lg">
+          Nowoczesne rozwiązania technologiczne i wysokiej jakości wykończenie zapewniają komfort oraz funkcjonalność na najwyższym poziomie.
           </h3>
         </div>
 
@@ -366,23 +364,22 @@ export default function WyrwaPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12">
             <div className="w-full md:w-1/2">
-              <img
-                src="/images/floor-plan.jpg"
-                alt="Plan mieszkania"
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1070.9310553478367!2d19.95687695698135!3d49.99571694335196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU5JzQ0LjEiTiAxOcKwNTcnMjIuOCJF!5e0!3m2!1spl!2spl!4v1741768777774!5m2!1spl!2spl" 
+                width="720" 
+                height="680" 
+                style={{border:0}} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full object-cover rounded-lg"
-                onError={(e) => {
-                  e.currentTarget.src =
-                    "https://placehold.co/600x400/e2e8f0/64748b?text=Plan+mieszkania";
-                }}
-              />
+              ></iframe>
             </div>
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
                 Lokalizacja
               </h2>
-              <h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <h3 className="text-lg"> Inwestycja zlokalizowana w zielonej, kameralnej części Krakowa (Swoszowice), oferująca idealną równowagę między spokojem podmiejskiego życia a szybkim dostępem do centrum miasta. W pobliżu znajdują się tereny rekreacyjne, parki oraz pełna infrastruktura miejska niezbędna do komfortowego życia.
               </h3>
 
               <div className="space-y-6 mt-10">
@@ -425,7 +422,7 @@ export default function WyrwaPage() {
           <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
             Galeria
           </h2>
-          <h3 className="text-center text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+          <h3 className="text-center text-lg mb-12">
             Odkryj piękno i elegancję naszych wnętrz. Każde pomieszczenie zostało zaprojektowane z dbałością o detale, 
             komfort i nowoczesny styl.
           </h3>
