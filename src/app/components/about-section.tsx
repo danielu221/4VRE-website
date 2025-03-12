@@ -22,7 +22,7 @@ export function AboutSection() {
             direction="right"
             className="space-y-8 order-1 md:order-2"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight ">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl  leading-tight ">
               4 Vision Real Estate – Tworzymy Przestrzeń Twoich Marzeń
             </h2>
             <p className="text-gray-600 text-lg">

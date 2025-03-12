@@ -17,7 +17,7 @@ export function AdvantagesSection() {
             viewport={{ once: true }}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl  leading-tight mb-4">
               Poznaj nasze atuty
             </h2>
           </motion.div>
@@ -36,25 +36,6 @@ export function AdvantagesSection() {
                     Tworzymy nowoczesne przestrzenie, które łączą technologię z
                     komfortem życia.
                   </p>
-                  <motion.div
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {/* <Link
-                      href="/learn-more"
-                      className="inline-flex items-center hover:opacity-80 font-medium"
-                    >
-                      Learn more
-                      <svg className="ml-2 w-4 h-4" viewBox="0 0 16 16" fill="none">
-                        <path
-                          d="M3 8H13M13 8L8 3M13 8L8 13"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                    </Link> */}
-                  </motion.div>
                 </div>
                 <div className="relative md:w-1/3 h-64 md:h-auto rounded-2xl overflow-hidden">
                   <ExportedImage

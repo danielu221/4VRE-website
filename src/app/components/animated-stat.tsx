@@ -38,11 +38,11 @@ export function AnimatedStat({ end, label, suffix = "" }: AnimatedStatProps) {
 
   return (
     <div ref={ref} className="space-y-2">
-      <p className="text-4xl font-bold">
+      <p className="text-2xl md:text-4xl font-bold">
         {count}
         {suffix}
       </p>
-      <p className="text-sm text-gray-500 uppercase tracking-wider">{label}</p>
+      <p className="text-sm uppercase tracking-wider">{label}</p>
     </div>
   )
 }

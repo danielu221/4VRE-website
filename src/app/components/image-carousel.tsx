@@ -49,7 +49,7 @@ export function ImageCarousel({ images, autoplayDelay = 4000 }: ImageCarouselPro
         <div className="flex">
           {images.map((image, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0">
-              <div className="relative h-[800px]">
+              <div className="relative h-[400px] md:h-[800px]">
                 <ExportedImage
                   src={image.src}
                   alt={image.alt}

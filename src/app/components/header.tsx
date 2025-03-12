@@ -7,8 +7,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
 
 // Custom navigation menu style without background
 const customNavigationStyle = "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:opacity-80 focus:outline-none disabled:pointer-events-none disabled:opacity-50";
@@ -21,7 +19,7 @@ export function Header() {
           <img 
             src="/4vre-logo-horizontal-black.svg" 
             alt="4 Vision Real Estate Logo" 
-            className="h-14 md:h-12"
+            className="h-6 md:h-12"
           />
         </Link>
         

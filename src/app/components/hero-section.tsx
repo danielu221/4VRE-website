@@ -22,17 +22,17 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-4 justify-center md:justify-start"
           >
             <Link
               href="#inwestycje"
-              className="px-6 py-3 bg-secondary text-white rounded hover:bg-secondary/90 transition-all duration-300 hover:scale-105"
+              className="px-3 md:px-6 py-3 bg-secondary text-white rounded hover:bg-secondary/90 transition-all duration-300 hover:scale-105"
             >
               Nasze inwestycje
             </Link>
             <Link
               href="#footer"
-              className="px-6 py-3 border rounded hover:bg-foreground/10 transition-all duration-300 hover:scale-105"
+              className="px-3 md:px-6 py-3 border rounded hover:bg-foreground/10 transition-all duration-300 hover:scale-105"
             >
               Skontaktuj się z nami
             </Link>

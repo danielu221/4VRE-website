@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-          <Link href="/"><img src="/4vre-logo-horizontal-white.svg" alt="4 Vision Real Estate Logo" className="h-14 md:h-12"/></Link>
+          <Link href="/"><img src="/4vre-logo-horizontal-white.svg" alt="4 Vision Real Estate Logo" className="h-6 md:h-12"/></Link>
             <div className="space-y-4">
               <p className="flex items-center gap-2 text-gray-400">
                 <Phone className="h-5 w-5 text-secondary-foreground" />
