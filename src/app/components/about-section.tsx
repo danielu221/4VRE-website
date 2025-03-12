@@ -4,7 +4,7 @@ import { AnimatedElement } from '@/app/components/animated-element';
 
 export function AboutSection() {
   return (
-    <article className="bg-background">
+    <article id="about" className="bg-background">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <AnimatedElement 

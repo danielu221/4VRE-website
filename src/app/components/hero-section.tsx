@@ -31,7 +31,7 @@ export function HeroSection() {
               Nasze inwestycje
             </Link>
             <Link
-              href="mailto:kontakt@4vre.pl"
+              href="#footer"
               className="px-6 py-3 border rounded hover:bg-foreground/10 transition-all duration-300 hover:scale-105"
             >
               Skontaktuj się z nami

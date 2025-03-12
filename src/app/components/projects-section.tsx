@@ -8,7 +8,7 @@ import { ImageCarousel } from "@/app/components/image-carousel";
 
 export function ProjectsSection() {
   return (
-    <article id="inwestycje" className="bg-background">
+    <article id="investments" className="bg-background">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <AnimatedElement className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
