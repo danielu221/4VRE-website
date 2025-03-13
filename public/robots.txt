@@ -1,4 +1,21 @@
+# 4 Vision Real Estate - Robots.txt
+# Last updated: 2024-03-20
+
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /*.json$
 
+# Allow all images to be indexed
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Crawl delay for all bots
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://4vre.pl/sitemap.xml 

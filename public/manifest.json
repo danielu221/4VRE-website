@@ -1,0 +1,38 @@
+{
+  "name": "4 Vision Real Estate",
+  "short_name": "4VRE",
+  "description": "Nowoczesne domy dla nowoczesnego życia. Luksusowe nieruchomości w prestiżowych lokalizacjach Krakowa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/4vre-logo-horizontal-black.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/4vre-logo-horizontal-white.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "orientation": "portrait",
+  "lang": "pl-PL",
+  "categories": ["real estate", "property", "housing", "luxury homes"],
+  "screenshots": [
+    {
+      "src": "/wyrwa_zewnatrz_1.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg"
+    }
+  ]
+}
