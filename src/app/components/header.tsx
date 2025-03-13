@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header className="container mx-auto px-4 py-6">
       <div className="flex items-center justify-between">
-        <Link href="/">
+        <Link href="/" className="z-10">
           <img 
             src="/4vre-logo-horizontal-black.svg" 
             alt="4 Vision Real Estate Logo" 
@@ -38,7 +38,7 @@ export function Header() {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link href="#about" legacyBehavior passHref>
+              <Link href="/#about" legacyBehavior passHref>
                 <NavigationMenuLink className={customNavigationStyle}>
                   O NAS
                 </NavigationMenuLink>
@@ -46,7 +46,7 @@ export function Header() {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link href="#investments" legacyBehavior passHref>
+              <Link href="/#investments" legacyBehavior passHref>
                 <NavigationMenuTrigger className="group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:opacity-80 focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                   INWESTYCJE
                 </NavigationMenuTrigger>
@@ -79,7 +79,7 @@ export function Header() {
 
         {/* Mobile Hamburger Button */}
         <button 
-          className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
+          className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 z-10"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -105,19 +105,19 @@ export function Header() {
           <div className="flex flex-col space-y-4">
             <Link 
               href="/" 
-              className="text-lg font-medium py-2 border-b border-gray-100"
+              className="text-lg font-medium py-2 border-b border-gray-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               HOME
             </Link>
             <Link 
               href="#about" 
-              className="text-lg font-medium py-2 border-b border-gray-100"
+              className="text-lg font-medium py-2 border-b border-gray-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               O NAS
             </Link>
-            <div className="py-2 border-b border-gray-100">
+            <div className="py-2 border-b border-gray-300">
               <Link 
                 href="#investments"
                 className="text-lg font-medium mb-2 block"
@@ -135,7 +135,7 @@ export function Header() {
             </div>
             <Link 
               href="#footer" 
-              className="text-lg font-medium py-2 border-b border-gray-100"
+              className="text-lg font-medium py-2 border-b border-gray-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               KONTAKT

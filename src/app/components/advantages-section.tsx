@@ -32,7 +32,7 @@ export function AdvantagesSection() {
                   <h3 className="text-2xl font-medium">
                     Innowacyjne domy
                   </h3>
-                  <p className="text-gray-600">
+                  <p >
                     Tworzymy nowoczesne przestrzenie, które łączą technologię z
                     komfortem życia.
                   </p>
@@ -62,7 +62,7 @@ export function AdvantagesSection() {
               <h3 className="text-2xl font-medium mb-4">
                 Energooszczędne rozwiązania
               </h3>
-              <p className="text-gray-600">
+              <p >
                 Oszczęność dzięki nowoczesnym systemom energetycznym.
               </p>
             </div>
@@ -80,7 +80,7 @@ export function AdvantagesSection() {
               <h3 className="text-2xl font-medium mb-4">
                 Bezstresowy proces zakupu
               </h3>
-              <p className="text-gray-600">
+              <p >
                 Kompleksowe wsparcie na każdym etapie budowy i zakupu.
               </p>
             </div>
@@ -98,7 +98,7 @@ export function AdvantagesSection() {
               <h3 className="text-2xl font-medium mb-4">
                 Indywidualne podejście
               </h3>
-              <p className="text-gray-600">
+              <p >
                 Każdy projekt dopasowujemy do Twoich potrzeb i oczekiwań,
                 tworząc przestrzeń idealną dla Ciebie i Twojej rodziny.
               </p>
@@ -118,7 +118,7 @@ export function AdvantagesSection() {
               <h3 className="text-2xl font-medium mb-4">
                 Topowe lokalizacje
               </h3>
-              <p className="text-gray-600">
+              <p >
                 Oferujemy domy w starannie dobranych miejscach, łączących spokój
                 i wygodę życia.
               </p>
@@ -140,7 +140,7 @@ export function AdvantagesSection() {
                   <h3 className="text-2xl font-medium">
                     Precyzja wykonania
                   </h3>
-                  <p className="text-gray-600">
+                  <p >
                     Każdy detal naszych domów jest dopracowany z najwyższą
                     starannością i dbałością o jakość.
                   </p>

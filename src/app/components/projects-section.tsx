@@ -32,7 +32,7 @@ export function ProjectsSection() {
               <h3 className="text-2xl font-medium mb-4">
                 Prestiżowa lokalizacja
               </h3>
-              <p className="text-gray-600">
+              <p>
                 Domy położone w sercu Krakowa, przy ul. Wyrwa, zapewniają
                 idealne połączenie spokoju, zieleni i bliskości miejskich
                 udogodnień.
@@ -43,7 +43,7 @@ export function ProjectsSection() {
               <h3 className="text-2xl font-medium mb-4">
                 Przemyślane wnętrza
               </h3>
-              <p className="text-gray-600">
+              <p>
                 Każdy detal jest starannie zaprojektowany i wykonany, aby
                 zapewnić wyjątkową jakość. Od najlepszych materiałów po
                 mistrzowskie wykończenia, Twój dom odzwierciedla precyzję i
@@ -55,7 +55,7 @@ export function ProjectsSection() {
               <h3 className="text-2xl font-medium mb-4">
                 Nowoczesna architektura
               </h3>
-              <p className="text-gray-600">
+              <p>
                 Domy zaprojektowane z myślą o elegancji i funkcjonalności,
                 łączące minimalistyczny design z najwyższą jakością wykonania.
               </p>

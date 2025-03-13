@@ -25,14 +25,14 @@ export function AboutSection() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl  leading-tight ">
               4 Vision Real Estate – Tworzymy Przestrzeń Twoich Marzeń
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-base md:text-lg">
               4 Vision Real Estate to dynamicznie rozwijająca się firma
               specjalizująca się w inwestycjach w domy jednorodzinne i działki
               na terenie Polski. Naszą misją jest tworzenie nowoczesnych
               przestrzeni, które spełniają najwyższe oczekiwania Klientów,
               łącząc funkcjonalność, estetykę i innowacyjne rozwiązania.
             </p>
-            <p className="text-gray-600 text-lg">
+            <p className="text-base md:text-lg">
               Nasza firma z pasją buduje swoją pozycję na rynku, stawiając na
               rozwój i zaufanie Klientów. Zachęcamy do śledzenia naszych
               postępów oraz zapoznania się z aktualną ofertą.

@@ -19,33 +19,35 @@ import {
   Landmark,
   Map,
 } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Footer } from "@/app/components/footer";
 import { IconCard } from "@/app/components/icon-card";
 import { Button } from "@/components/ui/button";
 import { Gallery } from "@/app/components/gallery";
+import { Header } from "@/app/components/header";
+import { FloorPlans } from "@/app/components/floor-plans";
 
 export default function WyrwaPage() {
   const propertyDetails = [
     {
-      icon: <Home className="w-8 h-8 " />,
+      icon: <Home className="w-6 h-6 md:w-8 md:h-8 " />,
       value: "02",
       label: "LICZBA DOMÓW",
     },
     {
-      icon: <Flag className="w-8 h-8 " />,
-      value: "450 m²",
+      icon: <Flag className="w-6 h-6 md:w-8 md:h-8 " />,
+      value: "500 m²",
       subValue: "/ dom",
       label: "POW. DZIAŁKI",
     },
     {
-      icon: <Ruler className="w-8 h-8 " />,
-      value: "107 m²",
+      icon: <Ruler className="w-6 h-6 md:w-8 md:h-8 " />,
+      value: "110 m²",
       subValue: "/ dom",
       label: "POW. UŻYTKOWA",
     },
     {
-      icon: <Fence className="w-8 h-8 " />,
+      icon: <Fence className="w-6 h-6 md:w-8 md:h-8 " />,
       value: "330 m²",
       subValue: "/ dom",
       label: "POW. OGRODU",
@@ -118,9 +120,52 @@ export default function WyrwaPage() {
     },
   ];
 
+  const floorPlanTabs = [
+    {
+      id: "parter",
+      label: "Parter",
+      title: "Parter",
+      description: "Przestronna strefa dzienna z otwartą kuchnią, jadalnią i salonem. Duże przeszklenia zapewniają doskonałe doświetlenie wnętrza i bezpośredni dostęp do ogrodu. Dodatkowo na parterze znajduje się łazienka oraz pomieszczenie techniczne.",
+      features: [
+        "Salon z jadalnią (35m²)",
+        "Otwarta kuchnia (12m²)",
+        "Łazienka (4m²)",
+        "Pomieszczenie techniczne (6m²)",
+      ],
+      imageSrc: "/images/floor-plan.jpg",
+    },
+    {
+      id: "pietro",
+      label: "Piętro",
+      title: "Piętro",
+      description: "Komfortowa strefa nocna z trzema sypialniami i dużą łazienką. Główna sypialnia posiada własną garderobę. Wszystkie pomieszczenia są doskonale doświetlone i zapewniają maksymalną prywatność.",
+      features: [
+        "Sypialnia główna (18m²)",
+        "Dwie sypialnie (12m² każda)",
+        "Łazienka (8m²)",
+        "Garderoba (6m²)",
+      ],
+      imageSrc: "/images/floor-plan-first.jpg",
+    },
+    {
+      id: "exterior",
+      label: "Budynek z zewnątrz",
+      title: "Budynek z zewnątrz",
+      description: "Nowoczesna bryła budynku o minimalistycznej formie. Elewacja wykonana z wysokiej jakości materiałów łączących biel, szarość i naturalne drewno. Duże przeszklenia oraz przestronny taras idealnie komponują się z otaczającym ogrodem.",
+      features: [
+        "Nowoczesna architektura",
+        "Duże przeszklenia",
+        "Taras (25m²)",
+        "Ogród (330m²)",
+      ],
+      imageSrc: "/images/exterior.jpg",
+    },
+  ];
+
   return (
     <>
       <section className="relative w-full h-screen">
+        <Header />
         {/* Background Image */}
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center"
@@ -130,8 +175,8 @@ export default function WyrwaPage() {
         </div>
 
         {/* Info Card */}
-        <Card className="absolute bottom-16 left-16 flex flex-col w-[450px] bg-[#f3efea]/70 backdrop-blur-[10px] rounded-3xl overflow-hidden border-none">
-          <CardContent className="flex flex-col gap-6 p-9 w-full">
+        <Card className="absolute bottom-16 left-16 flex flex-col w-[280px] md:w-[450px] bg-[#f3efea]/70 backdrop-blur-[10px] rounded-3xl overflow-hidden border-none">
+          <CardContent className="flex flex-col gap-6 p-6 md:p-9 w-full">
             <div className="flex flex-col gap-4 w-full">
               <div className="flex flex-col w-full">
                 <div className="flex items-center gap-2">
@@ -142,33 +187,33 @@ export default function WyrwaPage() {
                 </div>
 
                 <div className="flex flex-col gap-2 w-full">
-                  <h2 className="mt-[-1.00px]  text-5xl leading-[normal]">
+                  <h2 className="mt-[-1.00px]  text-4xl md:text-5xl leading-[normal] font-medium">
                     Wyrwa Residence
                   </h2>
                 </div>
               </div>
 
-              <p className=" text-base leading-6">
+              <p className="text-xs md:text-base md:leading-6">
               Kameralna i nowoczesna inwestycja z dwoma niezależnymi domami. Spokojne zacisze w dogodnej lokalizacji Krakowa.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 w-full">
+            <div className="flex flex-wrap gap-2 md:gap-3 w-full">
               {propertyDetails.map((detail, index) => (
                 <Card
                   key={index}
-                  className="flex w-40 items-center gap-3 px-3 py-[9px] bg-primary rounded-xl overflow-hidden border-none"
+                  className="flex w-[111px] md:w-40 items-center gap-2 md:gap-3 px-2 md:px-3 py-[9px] bg-primary rounded-xl overflow-hidden border-none"
                 >
-                  <CardContent className="flex items-center gap-3 p-0">
+                  <CardContent className="flex items-center gap-2 md:gap-3 p-0">
                     {detail.icon}
                     <div className="flex flex-col h-[42px] justify-center gap-1.5">
-                      <div className=" text-base leading-[normal]">
+                      <div className="text-[12px] md:text-base leading-[normal]">
                         {detail.value}
                         {detail.subValue && (
-                          <span className="text-[10px]">{detail.subValue}</span>
+                          <span className="text-[7px] md:text-[10px]">{detail.subValue}</span>
                         )}
                       </div>
-                      <div className="text-[10px]  leading-[normal]">
+                      <div className="text-[7px] md:text-[10px] leading-[normal]">
                         {detail.label}
                       </div>
                     </div>
@@ -206,157 +251,7 @@ export default function WyrwaPage() {
 
       <hr className="border-t border-secondary border-foreground" />
       {/* Floors & plans */}
-      <section className="bg-background py-16 md:py-24 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className=" mx-auto">
-            <Card className="overflow-hidden">
-              <CardHeader className="pb-0">
-                <div className="flex space-x-2 border-b pb-2">
-                  <button className="px-4 py-2 text-sm font-medium ">
-                    Ogród
-                  </button>
-                  <button className="px-4 py-2 text-sm font-medium ">
-                    Parter
-                  </button>
-                  <button className="px-4 py-2 text-sm font-medium ">
-                    Piętro
-                  </button>
-                </div>
-              </CardHeader>
-              <CardContent className="p-0">
-                <div className="flex flex-col md:flex-row">
-                  {/* Left column - Text content */}
-                  <div className="w-full md:w-1/2 p-9">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                      Ogród
-                    </h2>
-                    <p className=" mb-6">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                      <div className="flex items-center">
-                        <div className="w-5 h-5 mr-2 border border-foreground flex items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="w-3 h-3"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </div>
-                        <span>Lorem ipsum dolor sit</span>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-5 h-5 mr-2 border border-foreground flex items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="w-3 h-3"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </div>
-                        <span>Lorem ipsum dolor sit</span>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-5 h-5 mr-2 border border-foreground flex items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="w-3 h-3"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </div>
-                        <span>Lorem ipsum dolor sit</span>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-5 h-5 mr-2 border border-foreground flex items-center justify-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="w-3 h-3"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </div>
-                        <span>Lorem ipsum dolor sit</span>
-                      </div>
-                    </div>
-                    <div className="border-t pt-4">
-                      <a
-                        href="#"
-                        className="inline-flex items-center text-sm font-medium"
-                      >
-                        OPIS POSIADŁOŚCI PDF
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="ml-2"
-                        >
-                          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
-                          <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Right column - Floor plan image */}
-                  <div className="w-full md:w-1/2 p-9">
-                    <img
-                      src="/images/floor-plan.jpg"
-                      alt="Plan mieszkania"
-                      className="w-full h-full object-cover rounded-lg"
-                      onError={(e) => {
-                        e.currentTarget.src =
-                          "https://placehold.co/600x400/e2e8f0/64748b?text=Plan+mieszkania";
-                      }}
-                    />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <FloorPlans tabs={floorPlanTabs} />
 
       <hr className="border-t border-secondary border-foreground" />
       {/* Location */}
