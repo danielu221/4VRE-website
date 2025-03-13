@@ -56,32 +56,38 @@ export default function WyrwaPage() {
 
   const amenities = [
     {
-      icon: <Heater size={124} absoluteStrokeWidth={true} />,
+      icon: <Heater size={72} absoluteStrokeWidth={true} />,
+      iconDesktop: <Heater size={124} absoluteStrokeWidth={true} />,
       title: "OGRZEWANIE",
       subtitle: "PODŁOGOWE",
     },
     {
-      icon: <Cable size={124} absoluteStrokeWidth={true} />,
+      icon: <Cable size={72} absoluteStrokeWidth={true} />,
+      iconDesktop: <Cable size={124} absoluteStrokeWidth={true} />,
       title: "INTERNET",
       subtitle: "ŚWIATŁOWÓD",
     },
     {
-      icon: <AirVent size={124} absoluteStrokeWidth={true} />,
+      icon: <AirVent size={72} absoluteStrokeWidth={true} />,
+      iconDesktop: <AirVent size={124} absoluteStrokeWidth={true} />,
       title: "INSTALACJA",
       subtitle: "POD KLIMATYZACJĘ",
     },
     {
-      icon: <Grid2X2Plus size={124} absoluteStrokeWidth={true} />,
+      icon: <Grid2X2Plus size={72} absoluteStrokeWidth={true} />,
+      iconDesktop: <Grid2X2Plus size={124} absoluteStrokeWidth={true} />,
       title: "INSTALACJA",
       subtitle: "POD FOTOWOLTAIKĘ",
     },
     {
-      icon: <BrickWall size={124} absoluteStrokeWidth={true} />,
+      icon: <BrickWall size={72} absoluteStrokeWidth={true} />,
+      iconDesktop: <BrickWall size={124} absoluteStrokeWidth={true} />,
       title: "MOŻLIWOŚĆ",
       subtitle: "ADAPTACJI WNĘTRZ",
     },
     {
-      icon: <Rotate3D size={124} absoluteStrokeWidth={true} />,
+      icon: <Rotate3D size={72} absoluteStrokeWidth={true} />,
+      iconDesktop: <Rotate3D size={124} absoluteStrokeWidth={true} />,
       title: "ORIENTACJA",
       subtitle: "WSCH. - ZACH.",
     },
@@ -151,12 +157,12 @@ export default function WyrwaPage() {
       id: "exterior",
       label: "Budynek z zewnątrz",
       title: "Budynek z zewnątrz",
-      description: "Nowoczesna bryła budynku o minimalistycznej formie. Elewacja wykonana z wysokiej jakości materiałów łączących biel, szarość i naturalne drewno. Duże przeszklenia oraz przestronny taras idealnie komponują się z otaczającym ogrodem.",
+      description: "Nowoczesna bryła budynku o minimalistycznej formie. Elewacja wykonana z wysokiej jakości materiałów łączących biel, szarość i naturalne drewno. Duże przeszklenia oraz przestronny taras idealnie komponują się z otaczającym ogrodem. Na zewnątrz wiata z miejscem na dwa samochody.",
       features: [
         "Nowoczesna architektura",
         "Duże przeszklenia",
-        "Taras (25m²)",
-        "Ogród (330m²)",
+        "Wiata z miejscem na dwa samochody",
+        "Działka 500m²",
       ],
       imageSrc: "/images/exterior.jpg",
     },
@@ -175,8 +181,8 @@ export default function WyrwaPage() {
         </div>
 
         {/* Info Card */}
-        <Card className="absolute bottom-16 left-16 flex flex-col w-[280px] md:w-[450px] bg-[#f3efea]/70 backdrop-blur-[10px] rounded-3xl overflow-hidden border-none">
-          <CardContent className="flex flex-col gap-6 p-6 md:p-9 w-full">
+        <Card className="absolute bottom-16 right-0 left-0 mx-8 md:mx-0 md:left-16 flex flex-col min-w-[280px] max-w-[450px] md:w-[450px] bg-[#f3efea]/70 backdrop-blur-[10px] rounded-3xl overflow-hidden border-none">
+          <CardContent className="flex flex-col gap-6 p-6 md:p-9 w-full ">
             <div className="flex flex-col gap-4 w-full">
               <div className="flex flex-col w-full">
                 <div className="flex items-center gap-2">
@@ -198,11 +204,11 @@ export default function WyrwaPage() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2 md:gap-3 w-full">
+            <div className="grid [grid-template-columns:repeat(2,minmax(0,150px))] md:grid-cols-2 gap-2 md:gap-3 w-full mx-auto justify-center">
               {propertyDetails.map((detail, index) => (
                 <Card
                   key={index}
-                  className="flex w-[111px] md:w-40 items-center gap-2 md:gap-3 px-2 md:px-3 py-[9px] bg-primary rounded-xl overflow-hidden border-none"
+                  className="flex items-center gap-2 md:gap-3 px-2 md:px-3 py-[9px] bg-primary rounded-xl overflow-hidden border-none"
                 >
                   <CardContent className="flex items-center gap-2 md:gap-3 p-0">
                     {detail.icon}
@@ -230,7 +236,7 @@ export default function WyrwaPage() {
           <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
             Atuty
           </h2>
-          <h3 className="text-center text-lg">
+          <h3 className="text-center text-base md:text-lg">
           Nowoczesne rozwiązania technologiczne i wysokiej jakości wykończenie zapewniają komfort oraz funkcjonalność na najwyższym poziomie.
           </h3>
         </div>
@@ -241,6 +247,7 @@ export default function WyrwaPage() {
               <IconCard
                 key={index}
                 icon={amenity.icon}
+                iconDesktop={amenity.iconDesktop}
                 title={amenity.title}
                 subtitle={amenity.subtitle}
               />
@@ -257,7 +264,7 @@ export default function WyrwaPage() {
       {/* Location */}
       <section className="bg-background py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-12">
+          <div className="flex flex-col flex-col-reverse md:flex-row gap-12">
             <div className="w-full md:w-1/2">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1070.9310553478367!2d19.95687695698135!3d49.99571694335196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU5JzQ0LjEiTiAxOcKwNTcnMjIuOCJF!5e0!3m2!1spl!2spl!4v1741768777774!5m2!1spl!2spl" 
@@ -267,14 +274,14 @@ export default function WyrwaPage() {
                 allowFullScreen 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-[450px] md:h-full object-cover rounded-lg"
               ></iframe>
             </div>
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
                 Lokalizacja
               </h2>
-              <h3 className="text-lg"> Inwestycja zlokalizowana w zielonej, kameralnej części Krakowa (Swoszowice), oferująca idealną równowagę między spokojem podmiejskiego życia a szybkim dostępem do centrum miasta. W pobliżu znajdują się tereny rekreacyjne, parki oraz pełna infrastruktura miejska niezbędna do komfortowego życia.
+              <h3 className="text-base"> Inwestycja zlokalizowana w zielonej, kameralnej części Krakowa (Swoszowice), oferująca idealną równowagę między spokojem podmiejskiego życia a szybkim dostępem do centrum miasta. W pobliżu znajdują się tereny rekreacyjne, parki oraz pełna infrastruktura miejska niezbędna do komfortowego życia.
               </h3>
 
               <div className="space-y-6 mt-10">
@@ -299,11 +306,18 @@ export default function WyrwaPage() {
                 <Button
                   variant="outline"
                   className="h-14 gap-3 px-6 py-4 rounded-xl border border-solid border-secondary"
+                  asChild
                 >
-                  <span className="px-4 [font-family:'Mulish-Regular',Helvetica] font-normal text-lg leading-6 whitespace-nowrap">
-                    OTWÓRZ MAPY
-                  </span>
-                  <Map className="!w-6 !h-6"  />
+                  <a 
+                    href="https://www.google.com/maps/place/49%C2%B059'44.1%22N+19%C2%B057'22.8%22E/@49.995717,19.956877,18z/data=!4m4!3m3!8m2!3d49.9955833!4d19.9563333?hl=pl&entry=ttu&g_ep=EgoyMDI1MDMxMC4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="px-4 [font-family:'Mulish-Regular',Helvetica] font-normal text-lg leading-6 whitespace-nowrap">
+                      OTWÓRZ MAPY
+                    </span>
+                    <Map className="!w-6 !h-6"  />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -317,7 +331,7 @@ export default function WyrwaPage() {
           <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
             Galeria
           </h2>
-          <h3 className="text-center text-lg mb-12">
+          <h3 className="text-center text-base md:text-lg mb-12">
             Odkryj piękno i elegancję naszych wnętrz. Każde pomieszczenie zostało zaprojektowane z dbałością o detale, 
             komfort i nowoczesny styl.
           </h3>
@@ -326,56 +340,56 @@ export default function WyrwaPage() {
             <Gallery 
               images={[
                 {
-                  src: "/images/gallery/interior1.jpg",
-                  alt: "Interior design - living room",
+                  src: "/wyrwa_zewnatrz_1.jpg",
+                  alt: "Wyrwa Residence - zewnątrz",
                   width: 1200,
                   height: 1200
                 },
                 {
-                  src: "/images/gallery/interior2.jpg",
-                  alt: "Interior design - kitchen",
+                  src: "/wyrwa_zewnatrz_2.jpg",
+                  alt: "Wyrwa Residence - zewnątrz",
                   width: 1200,
                   height: 1200
                 },
                 {
-                  src: "/images/gallery/interior3.jpg",
-                  alt: "Interior design - bathroom",
+                  src: "/wyrwa_zewnatrz_3.jpg",
+                  alt: "Wyrwa Residence - zewnątrz",
                   width: 1200,
                   height: 1200
                 },
                 {
-                  src: "/images/gallery/interior4.jpg",
-                  alt: "Interior design - bedroom",
+                  src: "/wyrwa_zewnatrz_4.jpg",
+                  alt: "Wyrwa Residence - zewnątrz",
                   width: 1200,
                   height: 1200
                 },
                 {
-                  src: "/images/gallery/interior5.jpg",
-                  alt: "Interior design - living area",
+                  src: "/wyrwa_zewnatrz_5.jpg",
+                  alt: "Wyrwa Residence - zewnątrz",
                   width: 1200,
                   height: 1200
                 },
                 {
-                  src: "/images/gallery/interior6.jpg",
-                  alt: "Interior design - bathroom detail",
+                  src: "/wyrwa_wnetrze_2.jpg",
+                  alt: "Wyrwa Residence - wnętrze",
                   width: 1200,
                   height: 1200
                 },
                 {
-                  src: "/images/gallery/interior4.jpg",
-                  alt: "Interior design - bedroom",
+                  src: "/wyrwa_wnetrze_7.jpg",
+                  alt: "Wyrwa Residence - wnętrze",
                   width: 1200,
                   height: 1200
                 },
                 {
-                  src: "/images/gallery/interior5.jpg",
-                  alt: "Interior design - living area",
+                  src: "/wyrwa_wnetrze_8.jpg",
+                  alt: "Wyrwa Residence - wnętrze",
                   width: 1200,
                   height: 1200
                 },
                 {
-                  src: "/images/gallery/interior6.jpg",
-                  alt: "Interior design - bathroom detail",
+                  src: "/wyrwa_wnetrze_14.jpg",
+                  alt: "Wyrwa Residence - wnętrze",
                   width: 1200,
                   height: 1200
                 }
