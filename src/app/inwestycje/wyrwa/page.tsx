@@ -28,6 +28,7 @@ import { Header } from "@/app/components/header";
 import { FloorPlans } from "@/app/components/floor-plans";
 import { motion } from "framer-motion";
 import { AnimatedCard } from "@/app/components/animated-card";
+import { BackgroundCarousel } from "@/app/components/background-carousel";
 
 export default function WyrwaPage() {
   const propertyDetails = [
@@ -175,13 +176,16 @@ export default function WyrwaPage() {
     <>
       <section className="relative w-full h-screen">
         <Header />
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: 'url("/wyrwa_wnetrze_12.jpg")' }}
-        >
-          <div className="absolute inset-0 bg-black/10"></div>
-        </div>
+        {/* Background Carousel */}
+        <BackgroundCarousel 
+          images={[
+            "/wyrwa_zewnatrz_1.jpg",
+            "/wyrwa_wnetrze_7.jpg",
+            "/wyrwa_zewnatrz_2.jpg",
+            "/wyrwa_wnetrze_14.jpg"
+          ]}
+          autoplayDelay={6000}
+        />
 
         {/* Info Card */}
         <Card className="absolute bottom-16 right-0 left-0 mx-8 md:mx-0 md:left-16 flex flex-col min-w-[280px] max-w-[450px] md:w-[450px] bg-[#f3efea]/70 backdrop-blur-[10px] rounded-3xl overflow-hidden border-none">
