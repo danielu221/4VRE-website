@@ -26,6 +26,8 @@ import { Button } from "@/components/ui/button";
 import { Gallery } from "@/app/components/gallery";
 import { Header } from "@/app/components/header";
 import { FloorPlans } from "@/app/components/floor-plans";
+import { motion } from "framer-motion";
+import { AnimatedCard } from "@/app/components/animated-card";
 
 export default function WyrwaPage() {
   const propertyDetails = [
@@ -234,24 +236,33 @@ export default function WyrwaPage() {
 
       <section className="bg-background py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Atuty
-          </h2>
-          <h3 className="text-center text-base md:text-lg">
-          Nowoczesne rozwiązania technologiczne i wysokiej jakości wykończenie zapewniają komfort oraz funkcjonalność na najwyższym poziomie.
-          </h3>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+              Atuty
+            </h2>
+            <h3 className="text-center text-base md:text-lg">
+              Nowoczesne rozwiązania technologiczne i wysokiej jakości wykończenie zapewniają komfort oraz funkcjonalność na najwyższym poziomie.
+            </h3>
+          </motion.div>
         </div>
 
         <div className="container mx-auto px-4 mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:[grid-template-columns:repeat(3,minmax(0,320px))] gap-6 justify-center">
             {amenities.map((amenity, index) => (
-              <IconCard
-                key={index}
-                icon={amenity.icon}
-                iconDesktop={amenity.iconDesktop}
-                title={amenity.title}
-                subtitle={amenity.subtitle}
-              />
+              <AnimatedCard key={index} delay={index * 0.1}>
+                <IconCard
+                  icon={amenity.icon}
+                  iconDesktop={amenity.iconDesktop}
+                  title={amenity.title}
+                  subtitle={amenity.subtitle}
+                />
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -266,7 +277,13 @@ export default function WyrwaPage() {
       <section className="bg-background py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col flex-col-reverse md:flex-row gap-12">
-            <div className="w-full md:w-1/2">
+            <motion.div 
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="w-full md:w-1/2"
+            >
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1070.9310553478367!2d19.95687695698135!3d49.99571694335196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU5JzQ0LjEiTiAxOcKwNTcnMjIuOCJF!5e0!3m2!1spl!2spl!4v1741768777774!5m2!1spl!2spl" 
                 width="720" 
@@ -275,10 +292,16 @@ export default function WyrwaPage() {
                 allowFullScreen 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-[450px] md:h-full  rounded-lg"
+                className="w-full h-[450px] md:h-full rounded-lg"
               ></iframe>
-            </div>
-            <div className="w-full md:w-1/2">
+            </motion.div>
+            <motion.div 
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="w-full md:w-1/2"
+            >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
                 Lokalizacja
               </h2>
@@ -287,12 +310,22 @@ export default function WyrwaPage() {
 
               <div className="space-y-6 mt-10">
                 {locationAmenities.map((amenity, index) => (
-                  <div
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                     className="flex items-center justify-between border-b border-secondary pb-3"
                   >
                     <div className="flex items-center">
-                      <div className="mr-6">{amenity.icon}</div>
+                      <motion.div 
+                        whileHover={{ rotate: 15 }}
+                        transition={{ duration: 0.2 }}
+                        className="mr-6"
+                      >
+                        {amenity.icon}
+                      </motion.div>
                       <span className="font-medium text-lg">
                         {amenity.name}
                       </span>
@@ -300,10 +333,16 @@ export default function WyrwaPage() {
                     <div className="text-right text-lg">
                       {amenity.distance} | {amenity.time}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-              <div className="mt-10">
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="mt-10"
+              >
                 <Button
                   variant="outline"
                   className="h-14 gap-3 px-6 py-4 rounded-xl border border-solid border-secondary"
@@ -320,8 +359,8 @@ export default function WyrwaPage() {
                     <Map className="!w-6 !h-6"  />
                   </a>
                 </Button>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -329,15 +368,29 @@ export default function WyrwaPage() {
       <hr className="border-t border-secondary border-foreground" />
       <section className="bg-primary py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Galeria
-          </h2>
-          <h3 className="text-center text-base md:text-lg mb-12">
-            Odkryj piękno i elegancję naszych wnętrz. Każde pomieszczenie zostało zaprojektowane z dbałością o detale, 
-            komfort i nowoczesny styl.
-          </h3>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+              Galeria
+            </h2>
+            <h3 className="text-center text-base md:text-lg mb-12">
+              Odkryj piękno i elegancję naszych wnętrz. Każde pomieszczenie zostało zaprojektowane z dbałością o detale, 
+              komfort i nowoczesny styl.
+            </h3>
+          </motion.div>
           
-          <div className="mt-12">
+          <motion.div 
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-12"
+          >
             <Gallery 
               images={[
                 {
@@ -396,7 +449,7 @@ export default function WyrwaPage() {
                 }
               ]}
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
