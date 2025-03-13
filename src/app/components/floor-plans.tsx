@@ -2,6 +2,10 @@
 
 import { useState, useRef } from "react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import ExportedImage from "next-image-export-optimizer";
+import { Eye } from "lucide-react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 type FloorPlanTab = {
   id: string;
@@ -21,6 +25,7 @@ export function FloorPlans({ tabs }: FloorPlansProps) {
   const [prevHeight, setPrevHeight] = useState<number | null>(null);
   const [isChanging, setIsChanging] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const activeTabData = tabs.find((tab) => tab.id === activeTab) || tabs[0];
 
@@ -39,6 +44,12 @@ export function FloorPlans({ tabs }: FloorPlansProps) {
       setActiveTab(tabId);
       setIsChanging(false);
     }, 150);
+  };
+
+  // Prepare slide for lightbox
+  const slide = {
+    src: activeTabData.imageSrc,
+    alt: `Plan ${activeTabData.label}`,
   };
 
   return (
@@ -103,42 +114,30 @@ export function FloorPlans({ tabs }: FloorPlansProps) {
                         </div>
                       ))}
                     </div>
-                    {/* <div className="border-t pt-4">
-                      <a
-                        href="#"
-                        className="inline-flex items-center text-sm font-medium"
-                      >
-                        OPIS POSIADŁOŚCI PDF
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="ml-2"
-                        >
-                          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
-                          <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                        </svg>
-                      </a>
-                    </div> */}
                   </div>
 
                   {/* Right column - Floor plan image */}
                   <div className="w-full md:w-1/2 p-9">
-                    <img
-                      src={activeTabData.imageSrc}
-                      alt={`Plan ${activeTabData.label}`}
-                      className="w-full h-full object-cover rounded-lg"
-                      onError={(e) => {
-                        e.currentTarget.src =
-                          "https://placehold.co/600x400/e2e8f0/64748b?text=Plan+mieszkania";
-                      }}
-                    />
+                    <div 
+                      className="relative w-full h-[400px] overflow-hidden rounded-lg group cursor-pointer"
+                      onClick={() => setLightboxOpen(true)}
+                    >
+                      <ExportedImage
+                        src={activeTabData.imageSrc}
+                        alt={`Plan ${activeTabData.label}`}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://placehold.co/600x400/e2e8f0/64748b?text=Plan+mieszkania";
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="p-3">
+                          <Eye className="text-white w-8 h-8" strokeWidth={1} />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -146,6 +145,18 @@ export function FloorPlans({ tabs }: FloorPlansProps) {
           </Card>
         </div>
       </div>
+
+      {/* Lightbox for full-screen view */}
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={[slide]}
+        styles={{
+          container: { backgroundColor: 'rgba(0, 0, 0, .9)' },
+          navigationPrev: { color: 'white' },
+          navigationNext: { color: 'white' },
+        }}
+      />
     </section>
   );
 } 

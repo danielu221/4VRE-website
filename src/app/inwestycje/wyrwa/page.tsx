@@ -131,27 +131,28 @@ export default function WyrwaPage() {
       id: "parter",
       label: "Parter",
       title: "Parter",
-      description: "Przestronna strefa dzienna z otwartą kuchnią, jadalnią i salonem. Duże przeszklenia zapewniają doskonałe doświetlenie wnętrza i bezpośredni dostęp do ogrodu. Dodatkowo na parterze znajduje się łazienka oraz pomieszczenie techniczne.",
+      description: "Przestronna strefa dzienna z otwartą kuchnią, jadalnią i salonem. Duże przeszklenia zapewniają doskonałe doświetlenie wnętrza i bezpośredni dostęp do ogrodu. Dodatkowo na parterze znajduje się biuro, łazienka oraz pomieszczenie techniczne.",
       features: [
-        "Salon z jadalnią (35m²)",
-        "Otwarta kuchnia (12m²)",
-        "Łazienka (4m²)",
-        "Pomieszczenie techniczne (6m²)",
+        "Salon z kuchnią (35.3m²)",
+        "Biuro (8.4m²)",
+        "Łazienka (4.4m²)",
+        "Pomieszczenie techniczne (4.9m²)",
       ],
-      imageSrc: "/images/floor-plan.jpg",
+      imageSrc: "/plan_parter.png",
     },
     {
       id: "pietro",
       label: "Piętro",
       title: "Piętro",
-      description: "Komfortowa strefa nocna z trzema sypialniami i dużą łazienką. Główna sypialnia posiada własną garderobę. Wszystkie pomieszczenia są doskonale doświetlone i zapewniają maksymalną prywatność.",
+      description: "Komfortowa strefa nocna z trzema sypialniami i łazienką. Główna sypialnia posiada własną garderobę. Wszystkie pomieszczenia są doskonale doświetlone i zapewniają maksymalną prywatność. Na piętrze znajdują się dwa balkony.",
       features: [
-        "Sypialnia główna (18m²)",
-        "Dwie sypialnie (12m² każda)",
-        "Łazienka (8m²)",
-        "Garderoba (6m²)",
+        "Sypialnia główna (21.7m²)",
+        "Sypialnia gościnna 1 (7.9m²)",
+        "Sypialnia gościnna 2 (12.1m²)",
+        "Łazienka (4.8m²)",
+        "Dwa balkony"
       ],
-      imageSrc: "/images/floor-plan-first.jpg",
+      imageSrc: "/plan_pietro.png",
     },
     {
       id: "exterior",
@@ -164,7 +165,7 @@ export default function WyrwaPage() {
         "Wiata z miejscem na dwa samochody",
         "Działka 500m²",
       ],
-      imageSrc: "/images/exterior.jpg",
+      imageSrc: "/wyrwa_zewnatrz_1.jpg",
     },
   ];
 
@@ -274,7 +275,7 @@ export default function WyrwaPage() {
                 allowFullScreen 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-[450px] md:h-full object-cover rounded-lg"
+                className="w-full h-[450px] md:h-full  rounded-lg"
               ></iframe>
             </div>
             <div className="w-full md:w-1/2">
