@@ -110,7 +110,7 @@ export default function WyrwaPage() {
     },
     {
       icon: <School className="w-10 h-10" strokeWidth={1} />,
-      name: "SZKOŁA PODSTAWOWA",
+      name: "SZKOŁA",
       distance: "1 km",
       time: "3 minuty",
     },
@@ -345,13 +345,14 @@ export default function WyrwaPage() {
               >
                 <Button
                   variant="outline"
-                  className="h-14 gap-3 px-6 py-4 rounded-xl border border-solid border-secondary"
+                  className="w-full md:w-auto h-14 gap-3 px-6 py-4 rounded-xl border border-solid border-secondary"
                   asChild
                 >
                   <a 
                     href="https://www.google.com/maps/place/49%C2%B059'44.1%22N+19%C2%B057'22.8%22E/@49.995717,19.956877,18z/data=!4m4!3m3!8m2!3d49.9955833!4d19.9563333?hl=pl&entry=ttu&g_ep=EgoyMDI1MDMxMC4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center"
                   >
                     <span className="px-4 [font-family:'Mulish-Regular',Helvetica] font-normal text-lg leading-6 whitespace-nowrap">
                       OTWÓRZ MAPY

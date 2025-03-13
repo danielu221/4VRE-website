@@ -6,7 +6,6 @@ import ExportedImage from "next-image-export-optimizer";
 import { Eye } from "lucide-react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { motion } from "framer-motion";
 
 type FloorPlanTab = {
   id: string;
@@ -56,20 +55,6 @@ export function FloorPlans({ tabs }: FloorPlansProps) {
   return (
     <section className="bg-background py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Rzuty i plany
-          </h2>
-          <h3 className="text-base md:text-lg">
-            Poznaj szczegółowe plany naszych domów, zaprojektowanych z myślą o funkcjonalności i komforcie.
-          </h3>
-        </motion.div>
         <div className="mx-auto">
           <Card className="overflow-hidden rounded-3xl">
             <CardHeader className="p-9 pb-0">
