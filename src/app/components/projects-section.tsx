@@ -63,11 +63,11 @@ export function ProjectsSection() {
 
             <AnimatedElement delay={0.4} className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-secondary pt-8">
               <AnimatedStat
-                end={14}
+                end={18}
                 label="Czas dojazdu do rynku"
                 suffix="min"
               />
-              <AnimatedStat end={107} label="Powierzchnia domu" suffix="m2" />
+              <AnimatedStat end={110} label="Powierzchnia domu" suffix="m2" />
               <AnimatedStat end={2} label="Liczba domów " />
             </AnimatedElement>
             <div className="pt-8">

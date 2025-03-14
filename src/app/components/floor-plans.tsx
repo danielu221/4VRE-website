@@ -86,7 +86,7 @@ export function FloorPlans({ tabs }: FloorPlansProps) {
                   className={`w-full flex flex-col md:flex-row transition-opacity duration-150 ease-in-out ${isChanging ? 'opacity-0' : 'animate-fadeIn'}`}
                 >
                   {/* Left column - Text content */}
-                  <div className="w-full md:w-1/2 p-9">
+                  <div className="w-full md:w-1/2 p-9 pb-0 md:pb-9">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
                       {activeTabData.title}
                     </h2>

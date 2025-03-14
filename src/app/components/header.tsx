@@ -38,14 +38,6 @@ export function Header() {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link href="/#about" legacyBehavior passHref>
-                <NavigationMenuLink className={customNavigationStyle}>
-                  O NAS
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            
-            <NavigationMenuItem>
               <Link href="/#investments" legacyBehavior passHref>
                 <NavigationMenuTrigger className="group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:opacity-80 focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                   INWESTYCJE
@@ -69,7 +61,15 @@ export function Header() {
             
             <NavigationMenuItem>
               <Link href="#footer" legacyBehavior passHref>
-                <NavigationMenuLink className={customNavigationStyle}>
+                <NavigationMenuLink 
+                  className={customNavigationStyle}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.querySelector('#footer')?.scrollIntoView({ 
+                      behavior: 'smooth' 
+                    });
+                  }}
+                >
                   KONTAKT
                 </NavigationMenuLink>
               </Link>
@@ -111,7 +111,7 @@ export function Header() {
               HOME
             </Link>
             <Link 
-              href="#about" 
+              href="/#about" 
               className="text-lg font-medium py-2 border-b border-gray-300"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -119,7 +119,7 @@ export function Header() {
             </Link>
             <div className="py-2 border-b border-gray-300">
               <Link 
-                href="#investments"
+                href="/#investments"
                 className="text-lg font-medium mb-2 block"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -134,7 +134,7 @@ export function Header() {
               </Link>
             </div>
             <Link 
-              href="#footer" 
+              href="/#footer" 
               className="text-lg font-medium py-2 border-b border-gray-300"
               onClick={() => setMobileMenuOpen(false)}
             >

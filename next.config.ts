@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   output:'export',
   distDir:'dist',
+  trailingSlash: true,
   basePath: '',
   images: {
     loader: "custom",

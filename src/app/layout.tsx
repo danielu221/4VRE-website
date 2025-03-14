@@ -85,6 +85,8 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
         <link rel="canonical" href="https://4vre.pl" />
         <meta name="theme-color" content="#000000" />
       </head>

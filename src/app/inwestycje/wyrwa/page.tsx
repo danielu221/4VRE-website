@@ -4,7 +4,6 @@ import {
   Flag,
   Ruler,
   Home,
-  Fence,
   MapPinIcon,
   AirVent,
   Heater,
@@ -18,6 +17,7 @@ import {
   TreePine,
   Landmark,
   Map,
+  CarFront,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Footer } from "@/app/components/footer";
@@ -50,10 +50,10 @@ export default function WyrwaPage() {
       label: "POW. UŻYTKOWA",
     },
     {
-      icon: <Fence className="w-6 h-6 md:w-8 md:h-8 " />,
-      value: "330 m²",
+      icon: <CarFront className="w-6 h-6 md:w-8 md:h-8 " />,
+      value: "02",
       subValue: "/ dom",
-      label: "POW. OGRODU",
+      label: "MSC. POSTOJOWE",
     },
   ];
 
@@ -107,7 +107,7 @@ export default function WyrwaPage() {
       icon: <Landmark className="w-10 h-10" strokeWidth={1} />,
       name: "RYNEK",
       distance: "12 km",
-      time: "15 minut",
+      time: "18 minut",
     },
     {
       icon: <School className="w-10 h-10" strokeWidth={1} />,
@@ -130,6 +130,20 @@ export default function WyrwaPage() {
   ];
 
   const floorPlanTabs = [
+    {
+      id: "exterior",
+      label: "Budynek z zewnątrz",
+      title: "Budynek z zewnątrz",
+      description: "Nowoczesna bryła budynku o minimalistycznej formie. Elewacja wykonana z wysokiej jakości materiałów łączących biel, szarość i naturalne drewno. Duże przeszklenia oraz przestronny taras idealnie komponują się z otaczającym ogrodem. Na zewnątrz wiata z miejscem na dwa samochody z możliwością zaaranżowania na garaż.",
+      features: [
+        "Nowoczesna architektura",
+        "Duże przeszklenia",
+        "Wiata z miejscem na dwa samochody",
+        "Możliwość zaaranżowania wiaty na garaż",
+        "Działka 500m²",
+      ],
+      imageSrc: "/wyrwa_zewnatrz_1.jpg",
+    },
     {
       id: "parter",
       label: "Parter",
@@ -156,25 +170,12 @@ export default function WyrwaPage() {
         "Dwa balkony"
       ],
       imageSrc: "/plan_pietro.png",
-    },
-    {
-      id: "exterior",
-      label: "Budynek z zewnątrz",
-      title: "Budynek z zewnątrz",
-      description: "Nowoczesna bryła budynku o minimalistycznej formie. Elewacja wykonana z wysokiej jakości materiałów łączących biel, szarość i naturalne drewno. Duże przeszklenia oraz przestronny taras idealnie komponują się z otaczającym ogrodem. Na zewnątrz wiata z miejscem na dwa samochody.",
-      features: [
-        "Nowoczesna architektura",
-        "Duże przeszklenia",
-        "Wiata z miejscem na dwa samochody",
-        "Działka 500m²",
-      ],
-      imageSrc: "/wyrwa_zewnatrz_1.jpg",
-    },
+    }
   ];
 
   return (
     <>
-      <section className="relative w-full h-screen">
+      <section className="relative w-full h-screen h-[100dvh]">
         <Header />
         {/* Background Carousel */}
         <BackgroundCarousel 
@@ -209,6 +210,7 @@ export default function WyrwaPage() {
               <p className="text-xs md:text-base md:leading-6">
               Kameralna i nowoczesna inwestycja z dwoma niezależnymi domami. Spokojne zacisze w dogodnej lokalizacji Krakowa.
               </p>
+              <p className="text-xs md:text-base md:leading-6 font-bold">Termin realizacji: IV kwartał 2026</p>
             </div>
 
             <div className="grid [grid-template-columns:repeat(2,minmax(0,150px))] md:grid-cols-2 gap-2 md:gap-3 w-full mx-auto justify-center">
