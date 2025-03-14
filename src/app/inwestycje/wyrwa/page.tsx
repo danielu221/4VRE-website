@@ -175,7 +175,7 @@ export default function WyrwaPage() {
 
   return (
     <>
-      <section className="relative w-full h-screen h-[100dvh]">
+      <section className="relative w-full height-full-viewport">
         <Header />
         {/* Background Carousel */}
         <BackgroundCarousel 
