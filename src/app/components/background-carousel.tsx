@@ -64,14 +64,14 @@ export function BackgroundCarousel({
         <>
           <button
             onClick={scrollPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10 hidden md:block"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-6 w-6 text-white" />
           </button>
           <button
             onClick={scrollNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10 hidden md:block"
             aria-label="Next slide"
           >
             <ChevronRight className="h-6 w-6 text-white" />
